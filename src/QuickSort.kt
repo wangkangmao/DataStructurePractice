@@ -38,8 +38,8 @@ fun main() {
 fun quickSortBasic(arr: IntArray, low: Int = 0, high: Int = arr.size - 1) {
     if (low < high) {
         val pivotIndex = partition(arr, low, high)
-        quickSortBasic(arr, low, pivotIndex - 1)
-        quickSortBasic(arr, pivotIndex + 1, high)
+        quickSortBasic(arr, low, pivotIndex - 1) // 基准左边排序
+        quickSortBasic(arr, pivotIndex + 1, high) // 基准右边排序
     }
 }
 
